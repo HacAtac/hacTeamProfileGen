@@ -10,3 +10,54 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: limegreen;
+    color:mediumblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color:var(--primary);
+    border: .30px solid (green);
+    border-radius: 10px;
+    max-width: 340px;
+    min-height: 240px;
+    margin: 50px 30px 0 50px;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color:hotpink;
+    border: 2px solid hotpink;
+    min-width: 300px;
+    position: relative;
+}
+
+.card-head h3, h4 {
+    color:lawngreen;
+    padding: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.card-body li {
+    background-color:lightpink;
+    padding: 7px;
+    margin: 10px 0 10px 0;
+    list-style-type: none;
+}

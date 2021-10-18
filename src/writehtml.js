@@ -1,19 +1,32 @@
 const fs = require('fs');
 
-const writeHtml = htmlContent => {
+const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/index.html', htmlContent, err => {
+        fs.writeFile('./dist/index.html', fileContent, err => {
             if (err) {
                 reject(err);
                 return;
             }
             resolve({
-                ok:true,
-                message: 'HTML created!'
+                ok: true,
+                message: 'File Created!'
             });
-            console.log("Your team profile has been created! Check it out in index.html");
-        })
+        });
+    });
+};
+const copyFile = () => {
+    return new Promise((resolve, reject) => {
+        fs.copyFile('./src/style.css', './dist/style.css', err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File copied'
+            });
+        });
     });
 };
 
-module.exports = { writeHtml };
+module.exports = { writeFile, copyFile }
