@@ -11,7 +11,7 @@ const writeHtml = htmlContent => {
                 ok:true,
                 message: 'HTML created!'
             });
-            console.log(writeHtml);
+            console.log("Your team profile has been created! Check it out in index.html");
         })
     });
 };
